@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    ticket:
+      jdbc-url: jdbc:h2:mem:ticketdb
+      driver-class-name: org.h2.Driver
+      username: sa
+      password:
+      hikari:
+        maximum-pool-size: 5
+
+  jpa:
+    ticket:
+      database-platform: org.hibernate.dialect.H2Dialect
+      show-sql: true
+      hibernate:
+        ddl-auto: update
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
